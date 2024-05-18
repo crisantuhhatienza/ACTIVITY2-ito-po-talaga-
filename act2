@@ -1,0 +1,13 @@
+# Given probabilities
+P_M = 0.10          # Probability of measles
+P_F = 0.90          # Probability of flu
+P_R_given_M = 0.95  # Probability of rash given measles
+P_R_given_F = 0.08  # Probability of rash given flu
+
+# Calculate P(R) using the law of total probability
+P_R = P_R_given_M * P_M + P_R_given_F * P_F
+
+# Calculate P(M|R) using Bayes' theorem
+P_M_given_R = (P_R_given_M * P_M) / P_R
+
+print("The probability that the child has measles given that they have a rash is:", P_M_given_R)
